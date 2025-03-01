@@ -1,8 +1,9 @@
-import express from 'express';
+import { Router } from 'express';
 import { updateUser, updatePassword, deleteUser, updateMe } from'./usuarios.controller.js';
 import {  actaulizarContraseñaValidator, actualizatUsuarioValidator, eliminarUsuarioValidator  } from "../middlewares/validate.usuarios.js";
 import router from '../auth/auth.routes.js';
 
+const router = Router()
 
 router.patch('/actualizarContrasenia', actaulizarContraseñaValidator, updatePassword)
 router.put('/actualizarme', actualizatUsuarioValidator, updateMe)
