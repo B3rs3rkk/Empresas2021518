@@ -1,0 +1,182 @@
+{
+  "info": {
+    "name": "Empresas API",
+    "description": "Colección de Postman para la API de Empresas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Usuarios",
+      "item": [
+        {
+          "name": "Actualizar Contraseña",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"password\": \"oldPassword\",\n\t\"newPassword\": \"newPassword\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/actualizarContrasenia",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["actualizarContrasenia"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar Información del Usuario",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"name\": \"Nuevo Nombre\",\n\t\"email\": \"nuevoemail@example.com\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/actualizarme",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["actualizarme"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar Usuario por UID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"name\": \"Nuevo Nombre\",\n\t\"email\": \"nuevoemail@example.com\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/actualizarUser/:uid",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["actualizarUser", ":uid"]
+            }
+          }
+        },
+        {
+          "name": "Eliminar Usuario por UID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/eliminarUser/:uid",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["eliminarUser", ":uid"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Compañías",
+      "item": [
+        {
+          "name": "Registrar Compañía",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"nombreCompania\": \"Nueva Compañía\",\n\t\"direccion\": \"Dirección\",\n\t\"telefono\": \"123456789\",\n\t\"correo\": \"correo@example.com\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/registrarCompania",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["registrarCompania"]
+            }
+          }
+        },
+        {
+          "name": "Actualizar Compañía por UID",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"nombreCompania\": \"Nombre Actualizado\",\n\t\"direccion\": \"Dirección Actualizada\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/actualizarCompania/:uid",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["actualizarCompania", ":uid"]
+            }
+          }
+        },
+        {
+          "name": "Listar Compañías",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"categoria\": \"Tecnología\",\n\t\"orden\": \"A-Z\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/listarCompanias",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["listarCompanias"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Registrar Usuario",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"name\": \"Nuevo Usuario\",\n\t\"email\": \"nuevoemail@example.com\",\n\t\"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/registrar",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["registrar"]
+            }
+          }
+        },
+        {
+          "name": "Iniciar Sesión",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"email\": \"email@example.com\",\n\t\"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:3000/loggiar",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["loggiar"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
